@@ -1,0 +1,29 @@
+
+
+{% extends 'myapp/base.html' %}
+
+{% block dinamico %}
+	<div class="endereco">
+
+		<a href="{% url 'endereco_edit' pk=endereco.pk %}"> Editar Endereco </a>
+		<br>
+		<a href="{% url 'endereco_remove' pk=endereco.pk %}"> Deletar Endereco </a>
+
+		 
+		<h3> Endereço ::::::: </h3> 
+		<p>{{ endereco.logradouro }}<br>
+		{{ endereco.numero }}<br>
+		{{ endereco.bairro }}<br>
+		{{ endereco.complemento }}<br>
+		{{ endereco.complemento2 }}<br>
+		{{ endereco.cidade }}<br>
+		{{ endereco.estado }}<br>
+		{{ endereco.cep }}</p>
+		
+		<br><br>
+		
+	</div>
+{% endblock %}
+
+
+

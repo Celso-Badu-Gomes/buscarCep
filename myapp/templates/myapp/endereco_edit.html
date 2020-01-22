@@ -1,0 +1,13 @@
+
+
+{% extends 'myapp/base.html' %}
+
+{% block dinamico %}
+	<h1>Nova enderecoagem</h1>
+	<form method="POST" class="endereco-form" enctype="multipart/form-data">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default">Save</button>
+		<button type="button" class="save btn btn-default" onclick="location.href='{% url 'busca_cep' %}';">Buscar Cep</button>
+	</form>
+{% endblock %}
+

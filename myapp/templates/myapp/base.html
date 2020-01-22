@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+     <head>
+		<img src="{% static 'imagens/logo.png' %}" alt="Company Logo"/>
+        <title>My App - Aula API</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/myapp.css' %}">
+	 </head>
+     <body>
+        <div>
+		<h1>My App - Aula API</h1>
+		<a href="{% url 'endereco_list' %}"> Home </a>
+		{% if user.is_authenticated %}
+			<a href="{% url 'endereco_new' %}"> Novo Endereco</a>
+		{% endif %}
+		</div>
+		{% block dinamico %}
+		{% endblock %}
+     </body> 
+</html>

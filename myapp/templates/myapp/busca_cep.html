@@ -1,0 +1,10 @@
+{% extends 'myapp/base.html' %}
+
+{% block dinamico %}
+	<h1>Buscar Cep</h1>
+	<form action="busca_cep" method="POST" class="endereco.form">
+		{% csrf_token %}
+		<input type="text" name="cep">
+		<button type="submit" class="save btn btn-default">Buscar</button>
+	</form>
+{% endblock %}

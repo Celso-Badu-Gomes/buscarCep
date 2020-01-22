@@ -1,0 +1,27 @@
+
+
+{% extends 'myapp/base.html' %}
+
+{% block dinamico %}
+
+		{% for endereco in enderecos %}
+			<div>
+			<h3> Endereço ::::::: </h3>
+				<p><a href="{% url 'endereco_detail' pk=endereco.pk %}">{{ endereco.logradouro }}</a><br>
+				 
+				{{ endereco.logradouro }}<br>
+				{{ endereco.numero }}<br>
+				{{ endereco.bairro }}<br>
+				{{ endereco.complemento }}<br>
+				{{ endereco.complemento2 }}<br>
+				{{ endereco.cidade }}<br>
+				{{ endereco.estado }}<br>
+				{{ endereco.cep }}</p>
+		
+				<br><br>
+			</div>
+		{% endfor %}
+
+{% endblock %}
+
+
